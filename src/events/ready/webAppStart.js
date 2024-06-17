@@ -78,7 +78,7 @@ module.exports = async (client) => {
     }
 
     app.get('/', (req, res) => {
-      const filePath = path.join(__dirname, 'utils', 'index.html');
+      const filePath = path.join(__dirname, '../../utils/index.html');
       fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
           res.status(500).send('Error reading the index.html file');
