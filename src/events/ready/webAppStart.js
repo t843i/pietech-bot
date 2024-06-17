@@ -76,7 +76,14 @@ module.exports = async (client) => {
     }
 
     app.get('/', (req, res) => {
-      res.send('Colin Alive 😎');
+      const filePath = path.join(__dirname, 'utils', 'index.html');
+      fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+          res.status(500).send('Error reading the index.html file');
+          return;
+        }
+        res.send(data);
+      });
     });
 
     app.get('/user/:discordId', saveDiscordIdToCookie, async (req, res) => {

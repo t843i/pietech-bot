@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2C2F33;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .error-modal {
+            background-color: #7289DA;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            max-width: 90%;
+        }
+
+        .error-header {
+            background-color: #5865F2;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .error-header h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .error-body {
+            padding: 20px;
+            font-size: 16px;
+        }
+
+        .error-footer {
+            padding: 10px;
+            display: flex;
+            justify-content: flex-end;
+            background-color: #23272A;
+        }
+
+        .error-footer button {
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .error-footer .btn-ok {
+            background-color: #7289DA;
+            color: white;
+        }
+
+        .error-footer .btn-ok:hover {
+            background-color: #5b6eae;
+            transform: scale(1.05);
+        }
+
+        .error-footer .btn-cancel {
+            background-color: #99aab5;
+            color: white;
+        }
+
+        .error-footer .btn-cancel:hover {
+            background-color: #778891;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-modal">
+        <div class="error-header">
+            <h1>Error | Tynelink</h1>
+            <span>&times;</span>
+        </div>
+        <div class="error-body">
+            The path you have entered is not valid. Kindly check the URL and try again. (Code 0x7789x09)
+        </div>
+        <div class="error-footer">
+            <button class="btn-cancel">Tynelink ROBLOX</button>
+            <button class="btn-ok" onclick="redirect()">Tynelink Discord</button>
+        </div>
+    </div>
+
+    <script>
+        function redirect() {
+            window.location.href = 'https://discord.com';
+        }
+    </script>
+</body>
+</html>
