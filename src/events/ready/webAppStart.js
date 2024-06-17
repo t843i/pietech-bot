@@ -120,7 +120,7 @@ module.exports = async (client) => {
     app.get('/oauth/callback', async (req, res) => {
       const params = oClient.callbackParams(req);
       const tokenSet = await oClient.callback(
-        `${url}:${port}/oauth/callback`,
+        `https://tynelink.co.uk/oauth/callback`,
         params,
         {
           state: req.signedCookies.state,
