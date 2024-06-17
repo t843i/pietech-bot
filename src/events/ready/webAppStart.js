@@ -44,7 +44,7 @@ module.exports = async (client) => {
     const oClient = new issuer.Client({
       client_id: clientId,
       client_secret: clientSecret,
-      redirect_uris: [`http://localhost:${port}/oauth/callback`],
+      redirect_uris: [`http://tynelink.co.uk/oauth/callback`],
       response_types: ['code'],
       scope: 'openid profile',
       id_token_signed_response_alg: 'ES256',

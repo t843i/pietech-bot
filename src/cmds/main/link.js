@@ -54,7 +54,7 @@ module.exports = {
 
       const button = new ButtonBuilder()
         .setLabel('Authorise Roblox Account')
-        .setURL(`https://localhost:3000/user/${randomString}`)
+        .setURL(`https://tynelink.co.uk/user/${randomString}`)
         .setStyle(ButtonStyle.Link);
 
       const row = new ActionRowBuilder().addComponents(button);
