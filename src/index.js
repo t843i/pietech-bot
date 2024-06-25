@@ -67,7 +67,7 @@ async function linkUser(discordId, info) {
       value: info.userId,
       inline: true,
     })
-    .setColor('#57F287')
+    .setColor('#0B9634')
     .setThumbnail(info.pictureUrl)
     .setTimestamp()
     .setFooter({
@@ -94,7 +94,7 @@ async function linkUser(discordId, info) {
       value: `[${info.displayName} (@${info.userName})](https://www.roblox.com/users/${info.userId}/profile)`,
     })
     .setThumbnail(info.pictureUrl)
-    .setColor('#57F287')
+    .setColor('#0B9634')
     .setTimestamp()
     .setFooter({
       text: 'Tynelink • Link Logs',

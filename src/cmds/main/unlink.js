@@ -27,7 +27,7 @@ const {
         .setDescription(
           'Are you sure you wish to unlink? This process is **permanent.**'
         )
-        .setColor('#F54D5F')
+        .setColor('#1D84BF')
         .setTimestamp()
         .setFooter({
           text: 'Tynelink • Unlink',
@@ -64,7 +64,7 @@ const {
                 .setDescription(
                   'You have been successfully unlinked.'
                 )
-                .setColor('#57F287')
+                .setColor('#0B9634')
                 .setTimestamp()
                 .setFooter({
                   text: 'Tynelink • Unlink',
@@ -79,7 +79,7 @@ const {
                 .setDescription(
                   'Unlinking process cancelled.'
                 )
-                .setColor('#57F287')
+                .setColor('#BF0E1A')
                 .setTimestamp()
                 .setFooter({
                   text: 'Tynelink • Unlink',
@@ -95,7 +95,7 @@ const {
                 .setDescription(
                   'You\'re account is not linked! Please run </link:1251672159361826886> to link your account!'
                 )
-                .setColor('#F54D5F')
+                .setColor('#BF0E1A')
                 .setTimestamp()
                 .setFooter({
                   text: 'Tynelink • Unlink',

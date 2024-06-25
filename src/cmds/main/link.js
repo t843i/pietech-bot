@@ -25,7 +25,7 @@ module.exports = {
         .setDescription(
           'Your account has already been linked. Run </unlink:1251680677565436007> to unlink.'
         )
-        .setColor('#F54D5F')
+        .setColor('#BF0E1A')
         .setTimestamp()
         .setFooter({
           text: 'Tynelink • Error',
@@ -45,7 +45,7 @@ module.exports = {
         .setDescription(
           `Press the button below to authorise your Roblox account.`
         )
-        .setColor('#3498DB')
+        .setColor('#1D84BF')
         .setTimestamp()
         .setFooter({
           text: 'Tynelink • Linking',
