@@ -72,7 +72,7 @@ async function linkUser(discordId, info) {
     .setTimestamp()
     .setFooter({
       text: 'Tynelink • Account Linked',
-      iconURL: 'https://imgur.com/a/tl-rS3EhiP',
+      iconURL: 'https://i.imgur.com/N75qRJ9.png',
     });
 
   await member.user.send({ embeds: [completeEmbed] });
@@ -97,8 +97,8 @@ async function linkUser(discordId, info) {
     .setColor('#57F287')
     .setTimestamp()
     .setFooter({
-      text: 'Colin • WebApp Logs',
-      iconURL: 'https://i.imgur.com/zX3pJOc.png',
+      text: 'Tynelink • Link Logs',
+      iconURL: 'https://i.imgur.com/N75qRJ9.png',
     });
 
   const logChannel = guild.channels.cache.get('1240337565043921050');

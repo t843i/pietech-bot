@@ -29,7 +29,7 @@ module.exports = {
         .setTimestamp()
         .setFooter({
           text: 'Tynelink • Error',
-          iconURL: 'https://imgur.com/a/tl-rS3EhiP',
+          iconURL: 'https://i.imgur.com/N75qRJ9.png',
         });
       return interaction.reply({ embeds: [alreadyEmbed], ephemeral: true });
     } else {
@@ -49,7 +49,7 @@ module.exports = {
         .setTimestamp()
         .setFooter({
           text: 'Tynelink • Linking',
-          iconURL: 'https://imgur.com/a/tl-rS3EhiP',
+          iconURL: 'https://i.imgur.com/N75qRJ9.png',
         });
 
       const button = new ButtonBuilder()

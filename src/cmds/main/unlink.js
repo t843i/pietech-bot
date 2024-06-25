@@ -31,7 +31,7 @@ const {
         .setTimestamp()
         .setFooter({
           text: 'Tynelink • Unlink',
-          iconURL: 'https://imgur.com/a/tl-rS3EhiP',
+          iconURL: 'https://i.imgur.com/N75qRJ9.png',
         });
         
         const confirmId = String(Math.random()*100)
@@ -68,7 +68,7 @@ const {
                 .setTimestamp()
                 .setFooter({
                   text: 'Tynelink • Unlink',
-                  iconURL: 'https://imgur.com/a/tl-rS3EhiP',
+                  iconURL: 'https://i.imgur.com/N75qRJ9.png',
                 });
 
                 i.update({ embeds: [doneEmbed], components: [] })
@@ -83,7 +83,7 @@ const {
                 .setTimestamp()
                 .setFooter({
                   text: 'Tynelink • Unlink',
-                  iconURL: 'https://imgur.com/a/tl-rS3EhiP',
+                  iconURL: 'https://i.imgur.com/N75qRJ9.png',
                 });
 
                 i.update({ embeds: [cancelEmbed], components: [] })
@@ -99,7 +99,7 @@ const {
                 .setTimestamp()
                 .setFooter({
                   text: 'Tynelink • Unlink',
-                  iconURL: 'https://imgur.com/a/tl-rS3EhiP',
+                  iconURL: 'https://i.imgur.com/N75qRJ9.png',
                 });
 
                 interaction.reply({ embeds: [cancelEmbed], components: [] })
