@@ -72,7 +72,7 @@ async function linkUser(discordId, info) {
     .setTimestamp()
     .setFooter({
       text: 'Tynelink • Account Linked',
-      iconURL: 'https://cdn.discordapp.com/attachments/1240337565043921049/1251675751191937107/Untitled_design_14.png?ex=666f7162&is=666e1fe2&hm=5c4aa511be73952a279e93ab90b30d0f20e4f794a9d201bff2cef9ed5f137bdd&',
+      iconURL: 'https://imgur.com/a/tl-rS3EhiP',
     });
 
   await member.user.send({ embeds: [completeEmbed] });
