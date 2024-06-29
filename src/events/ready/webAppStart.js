@@ -172,7 +172,7 @@ module.exports = async (client) => {
         '666e05969c7355c52e253cb8'
       );
 
-      res.redirect('https://discord.gg/cFXhwAhwhJ');
+      res.redirect('https://discord.gg/WuNJCBMyGB');
     });
 
     app.use('/api', sendInfoRouter);
