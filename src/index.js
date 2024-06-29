@@ -101,7 +101,7 @@ async function linkUser(discordId, info) {
       iconURL: 'https://i.imgur.com/XUEdhfL.png',
     });
 
-  const logChannel = guild.channels.cache.get('1240337565043921050');
+  const logChannel = guild.channels.cache.get('1161468198445654147');
   return await logChannel.send({ embeds: [logEmbed] });
 }
 
