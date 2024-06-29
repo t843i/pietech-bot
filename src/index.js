@@ -43,19 +43,19 @@ for (const folder of commandFolders) {
 })();
 
 async function linkUser(discordId, info) {
-  const guild = client.guilds.cache.get('1240337564527755397');
+  const guild = client.guilds.cache.get('1161421824253513728');
   const member = await guild.members.fetch(discordId);
-  const channel = guild.channels.cache.get('1250879203486863542');
+  const channel = guild.channels.cache.get('1161468198445654147');
 
   if (!member) return null;
 
   await member
     .setNickname(`${info.displayName} (@${info.userName})`)
     .catch((err) => console.log(err));
-  await member.roles.add(guild.roles.cache.get('1240337564527755398'));
+  await member.roles.add(guild.roles.cache.get('1161466150090199142'));
 
   const completeEmbed = new EmbedBuilder()
-    .setTitle('<:confirm:1251684197186146306> Success')
+    .setTitle('<:yes:1256689164712415386> Success')
     .setDescription('Your Roblox Account has been linked!')
     .addFields({
       name: 'Username',
@@ -71,8 +71,8 @@ async function linkUser(discordId, info) {
     .setThumbnail(info.pictureUrl)
     .setTimestamp()
     .setFooter({
-      text: 'Tynelink • Account Linked',
-      iconURL: 'https://i.imgur.com/N75qRJ9.png',
+      text: 'pietech • Account Linked',
+      iconURL: 'https://i.imgur.com/XUEdhfL.png',
     });
 
   await member.user.send({ embeds: [completeEmbed] });
@@ -97,8 +97,8 @@ async function linkUser(discordId, info) {
     .setColor('#0B9634')
     .setTimestamp()
     .setFooter({
-      text: 'Tynelink • Link Logs',
-      iconURL: 'https://i.imgur.com/N75qRJ9.png',
+      text: 'pietech • Link Logs',
+      iconURL: 'https://i.imgur.com/XUEdhfL.png',
     });
 
   const logChannel = guild.channels.cache.get('1240337565043921050');

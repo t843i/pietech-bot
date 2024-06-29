@@ -23,15 +23,15 @@ const {
       const member = await interaction.guild.members.fetch(interaction.user.id);
       if (member.roles.cache.has('1240337564527755398')) {
         const confirmEmbed = new EmbedBuilder()
-        .setTitle("<:info:1251684198318735402> Unlink")
+        .setTitle("<:info:1256689165857194004> Unlink")
         .setDescription(
           'Are you sure you wish to unlink? This process is **permanent.**'
         )
         .setColor('#1D84BF')
         .setTimestamp()
         .setFooter({
-          text: 'Tynelink • Unlink',
-          iconURL: 'https://i.imgur.com/N75qRJ9.png',
+          text: 'pietech • Unlink',
+          iconURL: 'https://i.imgur.com/XUEdhfL.png',
         });
         
         const confirmId = String(Math.random()*100)
@@ -60,30 +60,30 @@ const {
                 await member.roles.remove(guild.roles.cache.get('1240337564527755398'));
               
                 const doneEmbed = new EmbedBuilder()
-                .setTitle("<:confirm:1251684197186146306> Unlinked")
+                .setTitle("<:yes:1256689164712415386> Unlinked")
                 .setDescription(
                   'You have been successfully unlinked.'
                 )
                 .setColor('#0B9634')
                 .setTimestamp()
                 .setFooter({
-                  text: 'Tynelink • Unlink',
-                  iconURL: 'https://i.imgur.com/N75qRJ9.png',
+                  text: 'pietech • Unlink',
+                  iconURL: 'https://i.imgur.com/XUEdhfL.png',
                 });
 
                 i.update({ embeds: [doneEmbed], components: [] })
                 
             } else if (i.customId === cancelId) {
                 const cancelEmbed = new EmbedBuilder()
-                .setTitle("<:deny:1251684196049748098> Cancelled")
+                .setTitle("<:no:1256689163667902566> Cancelled")
                 .setDescription(
                   'Unlinking process cancelled.'
                 )
                 .setColor('#BF0E1A')
                 .setTimestamp()
                 .setFooter({
-                  text: 'Tynelink • Unlink',
-                  iconURL: 'https://i.imgur.com/N75qRJ9.png',
+                  text: 'pietech • Unlink',
+                  iconURL: 'https://i.imgur.com/XUEdhfL.png',
                 });
 
                 i.update({ embeds: [cancelEmbed], components: [] })
@@ -91,15 +91,15 @@ const {
           });
       } else {
             const cancelEmbed = new EmbedBuilder()
-                .setTitle("<:deny:1251684196049748098> Not Linked")
+                .setTitle("<:no:1256689163667902566> Not Linked")
                 .setDescription(
                   'You\'re account is not linked! Please run </link:1251672159361826886> to link your account!'
                 )
                 .setColor('#BF0E1A')
                 .setTimestamp()
                 .setFooter({
-                  text: 'Tynelink • Unlink',
-                  iconURL: 'https://i.imgur.com/N75qRJ9.png',
+                  text: 'pietech • Unlink',
+                  iconURL: 'https://i.imgur.com/XUEdhfL.png',
                 });
 
                 interaction.reply({ embeds: [cancelEmbed], components: [] })

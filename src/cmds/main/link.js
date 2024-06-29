@@ -21,15 +21,15 @@ module.exports = {
     const member = await interaction.guild.members.fetch(interaction.user.id);
     if (member.roles.cache.has('1240337564527755398')) {
       const alreadyEmbed = new EmbedBuilder()
-        .setTitle("<:deny:1251684196049748098> Error")
+        .setTitle("<:no:1256689163667902566> Error")
         .setDescription(
           'Your account has already been linked. Run </unlink:1251680677565436007> to unlink.'
         )
         .setColor('#BF0E1A')
         .setTimestamp()
         .setFooter({
-          text: 'Tynelink • Error',
-          iconURL: 'https://i.imgur.com/N75qRJ9.png',
+          text: 'pietech • Error',
+          iconURL: 'https://i.imgur.com/XUEdhfL.png',
         });
       return interaction.reply({ embeds: [alreadyEmbed], ephemeral: true });
     } else {
@@ -41,15 +41,15 @@ module.exports = {
       );
 
       const embed = new EmbedBuilder()
-        .setTitle('<:info:1251684198318735402>  Account Linking')
+        .setTitle('<:info:1256689165857194004>  Account Linking')
         .setDescription(
           `Press the button below to authorise your Roblox account.`
         )
         .setColor('#1D84BF')
         .setTimestamp()
         .setFooter({
-          text: 'Tynelink • Linking',
-          iconURL: 'https://i.imgur.com/N75qRJ9.png',
+          text: 'pietech • Linking',
+          iconURL: 'https://i.imgur.com/XUEdhfL.png',
         });
 
       const button = new ButtonBuilder()
