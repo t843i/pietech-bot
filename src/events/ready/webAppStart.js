@@ -175,6 +175,24 @@ module.exports = async (client) => {
       res.redirect('https://discord.gg/WrHEZnnGNX');
     });
 
+    app.listen('/whitelist/:robloxId/:productId', async(req, res) => {
+        let robloxId = req.params.robloxId
+        let productId = req.params.productId
+
+        let hasFound = false
+
+        let products = await getInfo(robloxId, "666e05969c7355c52e253cb8").products
+
+        for (let i in products) {
+          if (products[i] == productId) {
+            hasFound = true
+            break
+          }
+        }
+
+        res.send(hasFound)
+    })
+
     app.use('/api', sendInfoRouter);
 
     app.listen(port, () => {
