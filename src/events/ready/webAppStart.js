@@ -186,10 +186,8 @@ module.exports = async (client) => {
     
       let products = await getInfo(discordId, "666e05969c7355c52e253cb8");
     
-      console.log(products)
-
-      for (let i in products) {
-        if (String(products[i]) == String(productId)) {
+      for (let i in products.products) {
+        if (String(products.products[i]) == String(productId)) {
           hasFound = true;
           break;
         }
