@@ -180,6 +180,8 @@ module.exports = async (client) => {
       let productId = req.params.productId;
     
       let hasFound = false;
+
+      console.log(productId)
     
       let products = await getInfo(robloxId, "666e05969c7355c52e253cb8").products;
     
