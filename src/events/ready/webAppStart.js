@@ -185,6 +185,8 @@ module.exports = async (client) => {
     
       for (let i in products) {
         if (products[i] == productId) {
+          console.log(products[i])
+          console.log(productId)
           hasFound = true;
           break;
         }
