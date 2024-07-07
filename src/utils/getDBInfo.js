@@ -63,7 +63,12 @@ async function getInfo(search, listId) {
   });
 
   if (!locatedCard) {
-    return null;
+    await trello.getCardsOnList(listId).then((cards) => {
+      locatedCard = cards.find((card) => card.description === search);
+    });
+    if (!locatedCard) {
+      return null;
+    }
   }
 
   const checklists = await trello.getChecklistsOnCard(locatedCard.id);

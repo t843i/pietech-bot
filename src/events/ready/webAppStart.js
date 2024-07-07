@@ -188,8 +188,8 @@ module.exports = async (client) => {
       console.log(products)
 
       for (let i in products) {
-        console.log(i)
-        if (String(i) == String(productId)) {
+        console.log(products[i])
+        if (String(products[i]) == String(productId)) {
           console.log(i)
           console.log(productId)
           hasFound = true;
