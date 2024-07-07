@@ -9,6 +9,7 @@ const {
   getInfo,
   deleteCard,
   addCard,
+  getDiscordId,
 } = require('../../utils/getDBInfo');
 const { linkUser } = require('../../index');
 const { EmbedBuilder } = require('discord.js');
@@ -183,7 +184,7 @@ module.exports = async (client) => {
 
       console.log(productId)
     
-      let products = await getInfo(robloxId, "666e05969c7355c52e253cb8").products;
+      let products = await getInfo(getDiscordId(robloxId), "666e05969c7355c52e253cb8").products;
     
       console.log(products)
 

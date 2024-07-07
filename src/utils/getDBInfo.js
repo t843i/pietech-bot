@@ -55,6 +55,20 @@ async function getProducts() {
   }
 }
 
+async function getDiscordId(search) {
+  let locatedCard = null;
+
+  await trello.getCardsOnList("666e05969c7355c52e253cb8").then((cards) => {
+    locatedCard = cards.find((card) => card.name === search);
+  });
+
+  if (!locatedCard) {
+    return null;
+  }
+
+  return locatedCard.desc
+}
+
 async function getInfo(search, listId) {
   let locatedCard = null;
 
@@ -63,25 +77,7 @@ async function getInfo(search, listId) {
   });
 
   if (!locatedCard) {
-    await trello.getCardsOnList(listId).then((cards) => {
-      locatedCard = cards.find((card) => card.description === search);
-    });
-    if (!locatedCard) {
-      return null;
-    } else {
-      console.log('hii')
-      const checklists = await trello.getChecklistsOnCard(locatedCard.id);
-      const productsChecklist = checklists.find((checklist) => checklist.name === 'products');
-
-      const products = productsChecklist ? productsChecklist.checkItems.map((item) => item.name) : [];
-      return {
-        id: locatedCard.id,
-        name: locatedCard.name,
-        desc: locatedCard.desc,
-        due: locatedCard.due || null,
-        products: products,
-      }
-    }
+    return null;
   }
 
   const checklists = await trello.getChecklistsOnCard(locatedCard.id);
@@ -217,4 +213,5 @@ module.exports = {
   getInfo,
   deleteCard,
   addCard,
+  getDiscordId,
 };
