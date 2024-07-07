@@ -185,10 +185,12 @@ module.exports = async (client) => {
     
       let products = await getInfo(robloxId, "666e05969c7355c52e253cb8").products;
     
+      console.log(products)
+
       for (let i in products) {
-        console.log(products[i])
-        if (String(products[i]) == String(productId)) {
-          console.log(products[i])
+        console.log(i)
+        if (String(i) == String(productId)) {
+          console.log(i)
           console.log(productId)
           hasFound = true;
           break;
