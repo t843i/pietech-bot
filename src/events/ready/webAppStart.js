@@ -182,21 +182,14 @@ module.exports = async (client) => {
     
       let hasFound = false;
 
-      console.log(productId)
-
       let discordId = await getDiscordId(robloxId)
-
-      console.log(discordId)
     
       let products = await getInfo(discordId, "666e05969c7355c52e253cb8");
     
       console.log(products)
 
       for (let i in products) {
-        console.log(products[i])
         if (String(products[i]) == String(productId)) {
-          console.log(i)
-          console.log(productId)
           hasFound = true;
           break;
         }
