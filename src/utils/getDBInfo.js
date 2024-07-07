@@ -59,7 +59,7 @@ async function getDiscordId(search) {
   let locatedCard = null;
 
   await trello.getCardsOnList("666e05969c7355c52e253cb8").then((cards) => {
-    locatedCard = cards.find((card) => card.name === search);
+    locatedCard = cards.find((card) => card.desc === search);
   });
 
   if (!locatedCard) {
