@@ -66,7 +66,7 @@ async function getDiscordId(search) {
     return null;
   }
 
-  return locatedCard.desc
+  return locatedCard.name
 }
 
 async function getInfo(search, listId) {
