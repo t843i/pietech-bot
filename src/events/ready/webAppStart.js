@@ -184,9 +184,11 @@ module.exports = async (client) => {
 
       console.log(productId)
 
-      console.log(await getDiscordId(robloxId))
+      let discordId = await getDiscordId(robloxId)
+
+      console.log(discordId)
     
-      let products = await getInfo(await getDiscordId(robloxId), "666e05969c7355c52e253cb8");
+      let products = await getInfo(discordId, "666e05969c7355c52e253cb8");
     
       console.log(products)
 
