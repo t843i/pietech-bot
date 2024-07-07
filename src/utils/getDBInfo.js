@@ -68,6 +68,19 @@ async function getInfo(search, listId) {
     });
     if (!locatedCard) {
       return null;
+    } else {
+      console.log('hii')
+      const checklists = await trello.getChecklistsOnCard(locatedCard.id);
+      const productsChecklist = checklists.find((checklist) => checklist.name === 'products');
+
+      const products = productsChecklist ? productsChecklist.checkItems.map((item) => item.name) : [];
+      return {
+        id: locatedCard.id,
+        name: locatedCard.name,
+        desc: locatedCard.desc,
+        due: locatedCard.due || null,
+        products: products,
+      }
     }
   }
 
