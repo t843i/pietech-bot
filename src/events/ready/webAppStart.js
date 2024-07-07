@@ -184,7 +184,7 @@ module.exports = async (client) => {
       let products = await getInfo(robloxId, "666e05969c7355c52e253cb8").products;
     
       for (let i in products) {
-        if (products[i] == productId) {
+        if (String(products[i]) == String(productId)) {
           console.log(products[i])
           console.log(productId)
           hasFound = true;
